@@ -1,0 +1,30 @@
+@import '../../assets/styles/variables.scss';
+
+.results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  .center-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 48px;
+      color: $question;
+    }
+  
+    .score-text {
+      font-size: 18px;
+      font-weight: 400;
+  
+      .score {
+        font-size: 36px;
+        font-weight: 700;
+        color: $success;
+      }
+    }
+  }
+}
