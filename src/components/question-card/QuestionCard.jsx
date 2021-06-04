@@ -52,7 +52,9 @@ const QuestionCard = ({ question, goToNextQuestion, updateScore }) => {
       {question.flag && <img className='flag-img' src={question.flag} alt="Country flag" />}
       <h3>{question.text}</h3>
       {renderAnswerItems()}
-      {isNextButtonVisible && <Button className='next-button' type={BUTTON_TYPES.primary} text='Next' onClick={onNextButtonClick} />}
+      {isNextButtonVisible && <div className='next-btn-wrapper'>
+        <Button className='next-button' type={BUTTON_TYPES.primary} text='Next' onClick={onNextButtonClick} />
+      </div>}
     </div>
   </div>
 }

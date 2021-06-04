@@ -1,17 +1,50 @@
 @import "../../assets/styles/variables.scss";
 
 .card-wrapper {
+  height: 100%;
+  
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   h1 {
     color: $white;
     font-size: 36px;
     line-height: 54px;
-    margin-bottom: 10px;
+    margin-left: 10px;
+
+    @media (min-width: 768px) {
+      margin: 0 0 10px 0;
+    }
   }
+
   .card {
+    height: calc(100vh - 54px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+
+    @media (min-width: 768px) {
+      display: block;
+      padding: 68px 20px;
+      height: auto;
+    }
+
     .illustration {
       position: absolute;
       right: 0;
       top: -65px;
+      top: 15px;
+      width: 150px;
+
+      @media (min-width: 768px) {
+        right: 0;
+        top: -65px;
+        width: 110px;
+      }
     }
 
     .flag-img {
@@ -20,15 +53,26 @@
     }
 
     h3 {
-      font-size: 24px;
-      line-height: 36px;
+      font-size: 20px;
+      line-height: 24px;
       color: #2F527B;
-      height: 72px;
-      margin-bottom: 32px;
+      margin: 20px 0;
+      height: 50px;
+
+      @media (min-width: 768px) {
+        margin: 0 0 32px 0;
+        font-size: 24px;
+        line-height: 36px;
+        height: 72px;
+      }
     }
 
     &.flag {
-      height: 500px;
+      height: 100%;
+
+      @media (min-width: 768px) {
+        height: 500px;
+      }
     }
 
     .answer {
@@ -41,12 +85,16 @@
       align-items: center;
       font-size: 18px;
       line-height: 27px;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
       transition: color 0.2s ease;
       cursor: pointer;
       outline: 0;
       background-color: #FFF;
       position: relative;
+
+      @media (min-width: 768px) {
+        margin-bottom: 25px;
+      }
 
       &:hover {
         background-color: $yellow;
@@ -59,13 +107,18 @@
       }
 
       .text {
-        padding-left: 46px;
+        padding-left: 15px;
         text-align: left;
-        max-width: 320px;
+        max-width: 230px;
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;  
         overflow: hidden;
+
+        @media (min-width: 768px) {
+          padding-left: 46px;
+          max-width: 320px;
+        }
       }
 
       .answer-icon {
@@ -85,10 +138,17 @@
         color: #FFF;
       }
     }
+    
+    .next-btn-wrapper {
 
-    .next-button {
-      position: absolute;
-      right: 30px;
+      .next-button {
+        position: absolute;
+        right: 20px;
+
+        @media (min-width: 768px) {
+          right: 30px;
+        }
+      }
     }
   }
 }

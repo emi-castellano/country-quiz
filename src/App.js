@@ -24,7 +24,9 @@ const App = _ => {
   return <div className="main-app">
     {isEmpty(questions) && <h1 className='loading-text'>Loading questions</h1>}
     {!isEmpty(questions) && <Quiz questions={questions} resetGame={resetGame} />}
-    <span className="footer-text">created by <b>emi-castellano</b> - devChallenges.io</span>
+    <div className='footer'>
+      <span className="footer-text">created by <b>emi-castellano</b> - devChallenges.io</span>
+    </div>
   </div>
 }
 
