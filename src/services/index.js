@@ -54,7 +54,7 @@ const createFlagQuestion = selectedCountries => {
 }
 
 export const createQuestionsAndAnswers = async _ => {
-  const { data } = await axios.get('https://restcountries.eu/rest/v2/all')
+  const { data } = await axios.get('https://restcountries.com/v2/all')
   const countries = selectCountries(data)
   const dividedArray = new Array(Math.ceil(countries.length / numberOfOptionsForEachQuestion)).fill().map(_ => countries.splice(0, numberOfOptionsForEachQuestion))
   const questions = []
